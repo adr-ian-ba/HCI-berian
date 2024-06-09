@@ -517,7 +517,7 @@ nav .mobile .inner ul .download {
 }
 
 .footer-gallery {
-  margin-top: 0;
+  margin-top: 20rem;
 }
 
 footer {
@@ -813,7 +813,6 @@ footer .legal p {
 }
 .another-news .flex-container .news-container .card {
   background-color: #000;
-  border: 1px solid #00f;
   position: relative;
 }
 .another-news .flex-container .news-container .card .img-container {
@@ -1125,6 +1124,7 @@ footer .legal p {
 .asphalt-form .info form .form-input input {
   height: 2rem;
   width: 100%;
+  padding: 0.5REM;
 }
 .asphalt-form .info form .top {
   margin-bottom: 1rem;
@@ -1181,4 +1181,5 @@ footer .legal p {
   font-weight: bold;
   border: none;
   background-color: var(--secondary-color);
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
