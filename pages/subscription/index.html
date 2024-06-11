@@ -84,24 +84,25 @@
             <h1>CLICK <span class="green">APPLY</span> TO <span class="red">JOIN</span></h1>
             <h1>ASPHALT</h1>
     
-            <div class="section">
-                <form action="">
+            <div class="section animate-on-observe animate-down">
+                <form id="subscriptionForm">
                     <div class="top">
                         <div class="form-input">
                             <p>First Name</p>
-                            <input type="text">
+                            <input type="text" id="firstName">
+                            <p class="error" id="firstNameError">First Name is required</p>
                         </div>
         
                         <div class="form-input">
                             <p>Last Name</p>
-                            <input type="text">
+                            <input type="text" id="lastName">
+                            <p class="error" id="lastNameError">Last Name is required</p>
                         </div>
                     </div>
                     <div class="top-2">
                         <p>Gender</p>
     
                         <div class="input-group">
-    
                             <div class="radio-input">
                                 <input type="radio" name="gender" value="male">
                                 <p>Male</p>
@@ -114,57 +115,59 @@
                                 <input type="radio" name="gender" value="other">
                                 <p>Other</p>
                             </div>
-    
                         </div>
+                        <p class="error" id="genderError">Gender is required</p>
                     </div>
                     <div class="top-3">
                         <p>Date of birth</p>
-    
                         <div class="input-group">
                             <div class="form-input">
-                                <input type="number" placeholder="DD" min="1" max="31">
+                                <input type="number" id="day" placeholder="DD" min="1" max="31">
                             </div>
                             <div class="form-input">
-                                <input type="number" placeholder="MM" min="1" max="12">
+                                <input type="number" id="month" placeholder="MM" min="1" max="12">
                             </div>
                             <div class="form-input">
-                                <input type="number" placeholder="YYYY" min="1900" max="2024">
+                                <input type="number" id="year" placeholder="YYYY" min="1900" max="2024">
                             </div>
                         </div>
+                        <p class="error" id="dobError">Date of Birth is required</p>
                     </div>
                     <div class="top-4">
                         <div class="form-input">
                             <p>Email Address</p>
-                            <input type="email">
+                            <input type="email" id="email">
+                            <p class="error" id="emailError">Email Address is required</p>
                         </div>
                     </div>
     
                     <div class="top-5">
                         <div class="yes-no">
                             <input type="radio" name="newsletter" value="yes">
-                            <p>i am 18 years old or older</p>
+                            <p>I am 18 years old or older</p>
                         </div>
                         <div class="yes-no">
                             <input type="radio" name="newsletter" value="no">
-                            <p>i agree to gamefolt Privacy policy</p>
+                            <p>I agree to Gameloft Privacy policy</p>
                         </div>
                         <div class="yes-no">
                             <input type="radio" name="newsletter" value="maybe">
-                            <p>i agree to asphatl terms&conditions</p>
+                            <p>I agree to Asphalt terms & conditions</p>
                         </div>
                         <div class="yes-no">
                             <input type="radio" name="newsletter" value="later">
-                            <p>i agree to receive notification relating to asphatl 9</p>
+                            <p>I agree to receive notifications relating to Asphalt 9</p>
                         </div>
+                        <p class="error" id="newsletterError">You must agree to the terms</p>
                     </div>
     
-                    <button>Apply</button>
+                    <button type="button" onclick="validateForm()">Apply</button>
                 </form>
             </div>
         </div>
     </div>
     
-
+    
 
 
     <footer class="footer-gallery">
@@ -209,6 +212,15 @@
         </div>
 
     </footer>
+
+    <div class="dialog-overlay" id="dialogOverlay">
+        <div class="dialog">
+            <h2>Subscription Confirmation</h2>
+            <p id="dialogMessage" style="color: #000;"></p>
+            <button id="closeDialog">Close</button>
+        </div>
+    </div>
+
 
 
     <script src="../../script.js"></script>

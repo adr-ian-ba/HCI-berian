@@ -1124,7 +1124,7 @@ footer .legal p {
 .asphalt-form .info form .form-input input {
   height: 2rem;
   width: 100%;
-  padding: 0.5REM;
+  padding: 0.5rem;
 }
 .asphalt-form .info form .top {
   margin-bottom: 1rem;
@@ -1132,7 +1132,6 @@ footer .legal p {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 .asphalt-form .info form .top-2 {
   margin-bottom: 1rem;
@@ -1153,7 +1152,6 @@ footer .legal p {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 .asphalt-form .info form .top-3 .input-group input {
   max-width: 6rem;
@@ -1182,4 +1180,88 @@ footer .legal p {
   border: none;
   background-color: var(--secondary-color);
   border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.animate-on-observe {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-up {
+  transform: translateY(50px);
+}
+
+.animate-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-down {
+  transform: translateY(-50px);
+}
+
+.animate-down.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-left {
+  transform: translateX(-50px);
+}
+
+.animate-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-right {
+  transform: translateX(50px);
+}
+
+.animate-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.dialog-overlay .dialog {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.dialog-overlay .dialog h2 {
+  margin-top: 0;
+}
+.dialog-overlay .dialog p {
+  margin: 20px 0;
+}
+.dialog-overlay .dialog button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dialog-overlay .dialog button:hover {
+  background-color: #45a049;
 }/*# sourceMappingURL=style.css.map */
